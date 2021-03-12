@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Dancing+Script" rel="stylesheet">
     </head>
 <body class="container">
-    <h1 class="text-center text-danger mb-5" style="font-family: 'Abril Fatface',cursive;"> ONLINE SHOPPING CART PHP MYSQLI</h1>
+    <h1 class="text-center text-danger mb-5" style="font-family: 'Abril Fatface',cursive;"> FOOD APPLICATION</h1>
 
     
     <div class="row">
@@ -28,7 +29,7 @@
      //   echo "no connection";
    // }
 
-   $query= "SELECT `id`, `name`, `img`, `price`, `discount` FROM `shoppingcart` ORDER BY id ASC";
+   $query= "SELECT `id`, `name`, `image`, `price`, `discount` FROM `shoppingcart` ORDER BY id ASC";
    $queryfire= mysqli_query($con,$query);
    $num=mysqli_num_rows($queryfire);
    if($num>0){
@@ -37,14 +38,19 @@
           ?>
         <div class="col-lg-3 col-md-3 col-sm-12">
 
-         <form>
+         <form action="manage_cart.php">
            <div class="card">
-            <h6 class="card-title"> <?php echo $product['name']; ?> </h6>
+            <h6 class="card-title bg-info text-white p-2 text-uppercase"> <?php echo $product['name']; ?> </h6>
             <div class="card-body">
-               <img src="<?php echo $product['img']; ?>" alt="food" class="img-fluid">
+               <img src="<?php echo $product['image']; ?>" alt="food" class="img-fluid">
 
                <h6> &#8377;<?php echo $product['price']; ?> 
                <span> (<?php echo $product['discount']; ?>% off) </span></h6>
+               <input type="text" name="" class="form-control" placeholder="Quantity">
+            </div>
+            <div class="btn-group d-flex">
+            <input type="submit" name="add_to_cart" class="btn btn-success flex-fill" value=" Add to cart "></input>
+            <input type="submit" name="buy_now" class="btn btn-warning flex-fill text-white" value="BUY NOW" ></input>
 
             </div>
 
