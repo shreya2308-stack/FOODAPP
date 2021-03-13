@@ -1,6 +1,8 @@
 <?php
  
- $conn= mysqli_connect('localhost','root');
- mysqli_select_db($conn,'cart_system');
+ $conn= new mysqli("localhost","root","","cart_system");
+ if($conn->connect_error){
+     die("Connection Failed!".$conn->connect_error);
+ }
   
 ?>
