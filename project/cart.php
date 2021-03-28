@@ -38,6 +38,9 @@
         <a class="nav-link" href="checkout.php">Checkout</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="signup.php"><img src="Images/user.png" height="30px"></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link active" href="cart.php"><i class="fas
          fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"> </span> </a>
       </li>

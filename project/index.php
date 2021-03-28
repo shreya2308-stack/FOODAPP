@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,6 +36,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="checkout.php">Checkout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signup.php"><img src="Images/user.png" height="30px"></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="cart.php"><i class="fas
@@ -124,5 +131,8 @@
       }
     });
   </script>
+  <?php
+    echo $_SESSION['username'];
+  ?>
   </body>
 </html>
