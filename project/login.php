@@ -36,6 +36,8 @@ session_start();
             $db_pass = $email_pass['password'];
 
             $_SESSION['username'] = $email_pass['username'];
+            $_SESSION['phone'] = $email_pass['phone'];
+            $_SESSION['email'] = $email_pass['email'];
 
             $pass_decode = password_verify($password, $db_pass);
 
@@ -45,6 +47,8 @@ session_start();
                 alert("Login Successful");
                 </script>
                 <?php
+                
+                header('location:index.php');
                             
         }   else{
             ?>

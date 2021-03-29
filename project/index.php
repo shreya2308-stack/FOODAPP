@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['username'])){
+  echo "You are Logged Out";
+  header('location:login.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -7,46 +12,68 @@ session_start();
     <head>
       
         <meta charset="utf-8">
-        <meta name="author" content="arpita">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="shrink-to-fit=no, width=device-width,initial-scale=1">
         <title> CART SYSTEM</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" integrity="sha512-gRH0EcIcYBFkQTnbpO8k0WlsD20x5VzjhOA1Og8+ZUAhcMUCvd+APD35FJw3GzHAP3e+mP28YcDJxVr745loHw==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="styles1.css">
     </head>
-    <body>
-    
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <!-- Brand -->
-  <a class="navbar-brand" href="index.php">FOODNEST</a>
+    <body style="background-image: url(Images/bg3.jpg);" >
+      <header class="header">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.php">FOODNEST</a>
 
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                <a class="nav-link active" href="index.php">Products</a>
+              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Categories</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="checkout.php">Checkout</a>
+                </li>
+                <li class="navbar__item" id="dropdown">
+                  <a class="nav-link" href="#"><img src="Images/user.png" height="30px"></a>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li class="dropdown-links">
+                                <?php
+                                  echo $_SESSION['username'];
+                                ?>
+                            </li>
+                            <li class="dropdown-links">
+                                <a href="account.php" >Account</a>
+                            </li>                  
+                            <li class="dropdown-links">
+                                <a href="logout.php">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cart.php"><i class="fas
+                  fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"> </span> </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header> 
+<section style="margin-left:80px; color: white;">
+<br>
+<h3>
+  Welcome, 
+  <?php
+    echo $_SESSION['username'];
+  ?>
+</h3>
+<br>
+</section>
 
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link active" href="index.php">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Categories</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="checkout.php">Checkout</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="signup.php"><img src="Images/user.png" height="30px"></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="cart.php"><i class="fas
-         fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"> </span> </a>
-      </li>
-    </ul>
-  </div>
-</nav>
 <div class="container">
   <div id="message"></div>
   <div class="row mt-2 pb-3">
@@ -131,8 +158,6 @@ session_start();
       }
     });
   </script>
-  <?php
-    echo $_SESSION['username'];
-  ?>
+  
   </body>
 </html>

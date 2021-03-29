@@ -7,12 +7,13 @@
     <head>
       
         <meta charset="utf-8">
-        <meta name="author" content="arpita">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="shrink-to-fit=no, width=device-width,initial-scale=1">
         <title> CART </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" integrity="sha512-gRH0EcIcYBFkQTnbpO8k0WlsD20x5VzjhOA1Og8+ZUAhcMUCvd+APD35FJw3GzHAP3e+mP28YcDJxVr745loHw==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="styles1.css">    
     </head>
     <body>
     
@@ -37,8 +38,23 @@
       <li class="nav-item">
         <a class="nav-link" href="checkout.php">Checkout</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="signup.php"><img src="Images/user.png" height="30px"></a>
+      <li class="navbar__item" id="dropdown">
+        <a class="nav-link" href="#"><img src="Images/user.png" height="30px"></a>
+          <div class="dropdown-content">
+              <ul>
+                  <li class="dropdown-links">
+                      <?php
+                        echo $_SESSION['username'];
+                      ?>
+                  </li>
+                  <li class="dropdown-links">
+                      <a href="account.php" >Account</a>
+                  </li>                  
+                  <li class="dropdown-links">
+                      <a href="logout.php">Logout</a>
+                  </li>
+              </ul>
+          </div>
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="cart.php"><i class="fas
