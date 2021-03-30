@@ -66,10 +66,11 @@ if(!isset($_SESSION['username'])){
 <section style="margin-left:80px; color: white;">
 <br>
 <h3>
-  Welcome, 
+  Welcome
   <?php
     echo $_SESSION['username'];
-  ?>
+  ?>,
+  
 </h3>
 <br>
 </section>

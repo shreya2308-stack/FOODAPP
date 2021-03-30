@@ -33,7 +33,7 @@ session_start();
 
 </head>
 
-<body>
+<body style="background-image: url(Images/bg3.jpg);" >
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
     <a class="navbar-brand" href="index.php">FOODNEST</a>
@@ -82,7 +82,7 @@ session_start();
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6 px-4 pb-4" id="order">
-        <h4 class="text-center text-info p-2">Complete your order!</h4>
+        <h4 class="text-center" style ="color: white;">Complete your order!</h4>
         <div class="jumbotron p-3 mb-2 text-center">
           <h6 class="lead"><b>Product(s) : </b><?= $allItems; ?></h6>
           <h6 class="lead"><b>Delivery Charge : </b>Free</h6>
@@ -107,7 +107,7 @@ session_start();
                                 ?>" required>
           </div>
           <div class="form-group">
-            <textarea name="address" class="form-control" rows="3" cols="10" value="Enter Delivery Address Here..."></textarea>
+            <textarea name="address" class="form-control" rows="3" cols="10" placeholder="Enter Delivery Address Here..."></textarea>
           </div>
           <h6 class="text-center lead">Select Payment Mode</h6>
           <div class="form-group">
