@@ -7,6 +7,7 @@ $sql = "SELECT * FROM orders INNER JOIN registration1 ON orders.name = registrat
 $result = mysqli_query($connect,$sql);
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
       
