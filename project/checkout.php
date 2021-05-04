@@ -64,7 +64,10 @@ session_start();
                             </li>
                             <li class="dropdown-links">
                                 <a href="account.php" >Account</a>
-                            </li>                  
+                            </li>   
+                            <li class="dropdown-links">
+                                <a href="orders.php" >Orders</a>
+                            </li>                
                             <li class="dropdown-links">
                                 <a href="logout.php">Logout</a>
                             </li>
