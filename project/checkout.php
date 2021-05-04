@@ -19,6 +19,7 @@ session_start();
 	$allItems = implode(', ', $items);
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
