@@ -44,14 +44,18 @@ session_start();
 
             $pass_decode = password_verify($password, $db_pass);
 
+            
             if($pass_decode){
                 ?>
                 <script >
                 alert("Login Successful");
                 </script>
                 <?php
-                
-                header('location:products.php');
+                if($email_pass['email']=='admin@foodnest.com'){
+                    
+                    header('location:adminpage.php');}
+                else{
+                    header('location:products.php');}
                             
         }   else{
             ?>
