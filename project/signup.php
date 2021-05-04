@@ -13,10 +13,16 @@ session_start();
         <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <style>
-           
+           input:invalid {
+        border: 2px dashed red;
+      }
+
+      input:valid {
+        border: 2px solid black;
+      }
         </style>
     </head>
-    <body style="background-image: url(images/bg3.jpg);">
+    <body style="background-image: url(Images/bg3.jpg);">
     <?php
 
         include 'dbcon.php';
@@ -34,9 +40,13 @@ session_start();
             $cpass = password_hash($password, PASSWORD_BCRYPT);
         
             $emailquery = " SELECT * from registration1 where email='$email' ";
-            $query = mysqli_query($con,$emailquery);
+            $Equery = mysqli_query($con,$emailquery);
 
-            $emailcount = mysqli_num_rows($query);
+            $emailcount = mysqli_num_rows($Equery);
+
+            $userquery = " SELECT * from registration1 where username='$username' ";
+            $Uquery = mysqli_query($con,$userquery);
+            $usercount = mysqli_num_rows($Uquery);
 
             if($emailcount>0){
                         ?>
@@ -44,6 +54,13 @@ session_start();
                             alert("Email already exists.")
                         </script>
                         <?php
+            }
+            elseif($usercount>0){
+                ?>
+                <script>
+                    alert("Username already exists.")
+                </script>
+                <?php
             }
             else{
                 if ($password === $cpassword) {
@@ -55,6 +72,8 @@ session_start();
                         alert("Thank you for signing-up");
                     </script>
                     <?php 
+                    
+                header('location:index.php');
                 }
                 else{
                     ?>
@@ -65,41 +84,39 @@ session_start();
                 }
             }
         }
-
+       
             
     ?>
+   
+    
 
         <main>
         <header class="header">
             <nav class="navbar">
                 <div class="navbar__container">
-                    <a href="index.php" id="navbar__logo">FoodNest</a><img src="images/FN.png" style="height: 75px;">
+                    <a href="index.php" id="navbar__logo">FoodNest</a><img src="Images/FN.png" style="height: 75px;">
                 </div>
             </nav>
         </header>
             <div >
-                <img src="images/FN1.png" alt="" style='height:400px;margin-top: 150px; margin-right: 150px;' align=right >
+                <img src="Images/FN1.png" alt="" style='height:400px;margin-top: 150px; margin-right: 150px;' align=right >
                 <section class="positioning">
-                <!--
-                <h2 style="font-size: 30px; ">To get HealthBud</h2>
+                
                 <br>
-                <h1 style="font-size: 45px;">SIGN UP</h1>
-            -->
-                <br>
-                    <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                         <div class="UserContainer" style='margin-left: 400px;'>
-                            <label for="username" style="font-size: 18px;">Full Name</label>
+                            <label for="username" style="font-size: 18px;">Username</label>
                             <br>
-                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter your Name" name="username" required>
+                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter Username" name="username" required>
                             <br> <br>
                             <label for="email" style="font-size: 18px;">Email Address</label>
                             <br>
-                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Example@email.com" name="email" required>
+                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Example@email.com" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                             <br>
                             <br>
                             <label for="phone" style="font-size: 18px;">Phone Number</label>
                             <br>
-                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter Phone Number" name="phone" required>
+                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter Phone Number" name="phone" required  minlength="10" maxlength="10">
                             <br>
                             <br>
                             <label for="password" style="font-size: 18px;">Choose a Password</label>
