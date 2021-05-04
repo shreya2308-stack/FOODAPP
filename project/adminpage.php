@@ -19,8 +19,31 @@ if(!isset($_SESSION['username'])){
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" integrity="sha512-gRH0EcIcYBFkQTnbpO8k0WlsD20x5VzjhOA1Og8+ZUAhcMUCvd+APD35FJw3GzHAP3e+mP28YcDJxVr745loHw==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
         <link rel="stylesheet" href="styles1.css">
+        <style>
+        
+button[type=submit] {
+    background-color:  rgb(57, 167, 231);
+    font-size: 18x;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #f6f8fa;
+    border:solid;
+    border-color: rgb(57, 167, 231);
+    color: rgb(57, 167, 231);
+    border-radius: 16px;
+    transition: 0.3s ease;
+    align-self: flex-start;
+    opacity: 0.7;
+    }
+</style>
     </head>
-    <body style="background-image: url(images/bg3.jpg);" >
+    <body style="background-image: url(images/bg1.jpg);" >
       <header class="header">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <a class="navbar-brand" href="index.html"><img src="images/foodnest.png" alt="logo" class="img-responsive"></a>
@@ -102,6 +125,9 @@ if(!isset($_SESSION['username'])){
         </div>
          <?php endwhile; ?>
      </div>
+     </div>
+     <div style="margin-bottom:100px;">
+     <center><a href="newproduct.php" style="margin:30px;"><button type="submit" class="signupbtn" name="submit">New Product</button></a></center>
      </div>
 
       <!-- jQuery library -->

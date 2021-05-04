@@ -25,7 +25,6 @@ session_start();
       }
         </style>
     </head>
-    <body style="background-image: url(Images/bg3.jpg);">
     <?php
 
         include 'dbcon.php';
