@@ -16,7 +16,7 @@ session_start();
            
         </style>
     </head>
-    <body style="background-image: url(Images/bg3.jpg);">
+    <body style="background-image: url(images/bg3.jpg);">
     <?php
 
         include 'dbcon.php';
@@ -49,7 +49,7 @@ session_start();
                 </script>
                 <?php
                 
-                header('location:index.php');
+                header('location:products.php');
                             
         }   else{
             ?>
@@ -69,11 +69,11 @@ session_start();
     <header class="header">
         <nav class="navbar">
             <div class="navbar__container">
-                <a href="index.php" id="navbar__logo">FoodNest</a><img src="Images/FN.png" style="height: 75px;">
+                <a href="index.php" id="navbar__logo">FoodNest</a><img src="images/FN.png" style="height: 75px;">
             </div>
         </nav>
     </header>
-        <img src="Images/FN1.png" alt="" style='height:400px;margin-top: 200px; margin-right: 150px;' align=right >
+        <img src="images/FN1.png" alt="" style='height:400px;margin-top: 200px; margin-right: 150px;' align=right >
         <section class="positioning">
         <br>
             <form action="login.php" method="POST" >

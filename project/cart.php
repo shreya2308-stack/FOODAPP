@@ -19,7 +19,7 @@
     
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="index.php">FOODNEST</a>
+  images<a class="navbar-brand" href="index.html"><img src="images/foodnest.png" alt="logo" class="img-responsive"></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -30,7 +30,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Products</a>
+        <a class="nav-link" href="products.php">Products</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Categories</a>
@@ -39,7 +39,7 @@
         <a class="nav-link" href="checkout.php">Checkout</a>
       </li>
       <li class="navbar__item" id="dropdown">
-        <a class="nav-link" href="#"><img src="Images/user.png" height="30px"></a>
+        <a class="nav-link" href="#"><img src="images/user.png" height="30px"></a>
           <div class="dropdown-content">
               <ul>
                   <li class="dropdown-links">

@@ -16,7 +16,7 @@ session_start();
            
         </style>
     </head>
-    <body style="background-image: url(Images/bg3.jpg);">
+    <body style="background-image: url(images/bg3.jpg);">
     <?php
 
         include 'dbcon.php';
@@ -34,13 +34,9 @@ session_start();
             $cpass = password_hash($password, PASSWORD_BCRYPT);
         
             $emailquery = " SELECT * from registration1 where email='$email' ";
-            $Equery = mysqli_query($con,$emailquery);
+            $query = mysqli_query($con,$emailquery);
 
-            $emailcount = mysqli_num_rows($Equery);
-
-            $userquery = " SELECT * from registration1 where username='$username' ";
-            $Uquery = mysqli_query($con,$userquery);
-            $usercount = mysqli_num_rows($Uquery);
+            $emailcount = mysqli_num_rows($query);
 
             if($emailcount>0){
                         ?>
@@ -48,13 +44,6 @@ session_start();
                             alert("Email already exists.")
                         </script>
                         <?php
-            }
-            elseif($usercount>0){
-                ?>
-                <script>
-                    alert("Username already exists.")
-                </script>
-                <?php
             }
             else{
                 if ($password === $cpassword) {
@@ -66,8 +55,6 @@ session_start();
                         alert("Thank you for signing-up");
                     </script>
                     <?php 
-                    
-                header('location:index.php');
                 }
                 else{
                     ?>
@@ -86,20 +73,24 @@ session_start();
         <header class="header">
             <nav class="navbar">
                 <div class="navbar__container">
-                    <a href="index.php" id="navbar__logo">FoodNest</a><img src="Images/FN.png" style="height: 75px;">
+                    <a href="index.php" id="navbar__logo">FoodNest</a><img src="images/FN.png" style="height: 75px;">
                 </div>
             </nav>
         </header>
             <div >
-                <img src="Images/FN1.png" alt="" style='height:400px;margin-top: 150px; margin-right: 150px;' align=right >
+                <img src="images/FN1.png" alt="" style='height:400px;margin-top: 150px; margin-right: 150px;' align=right >
                 <section class="positioning">
-                
+                <!--
+                <h2 style="font-size: 30px; ">To get HealthBud</h2>
+                <br>
+                <h1 style="font-size: 45px;">SIGN UP</h1>
+            -->
                 <br>
                     <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
                         <div class="UserContainer" style='margin-left: 400px;'>
-                            <label for="username" style="font-size: 18px;">Username</label>
+                            <label for="username" style="font-size: 18px;">Full Name</label>
                             <br>
-                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter Username" name="username" required>
+                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter your Name" name="username" required>
                             <br> <br>
                             <label for="email" style="font-size: 18px;">Email Address</label>
                             <br>
