@@ -11,6 +11,9 @@ session_start();
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" integrity="sha512-gRH0EcIcYBFkQTnbpO8k0WlsD20x5VzjhOA1Og8+ZUAhcMUCvd+APD35FJw3GzHAP3e+mP28YcDJxVr745loHw==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
         <link rel="stylesheet" href="styles.css">
         <style>
            input:invalid {
@@ -73,7 +76,7 @@ session_start();
                     </script>
                     <?php 
                     
-                header('location:index.php');
+                header('location:products.php');
                 }
                 else{
                     ?>
@@ -92,12 +95,10 @@ session_start();
 
         <main>
         <header class="header">
-            <nav class="navbar">
-                <div class="navbar__container">
-                    <a href="index.php" id="navbar__logo">FoodNest</a><img src="Images/FN.png" style="height: 75px;">
-                </div>
-            </nav>
-        </header>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html"><img src="images/foodnest.png" alt="logo" class="img-responsive"></a>
+        </nav>
+      </header> 
             <div >
                 <img src="Images/FN1.png" alt="" style='height:400px;margin-top: 150px; margin-right: 150px;' align=right >
                 <section class="positioning">
@@ -107,7 +108,7 @@ session_start();
                         <div class="UserContainer" style='margin-left: 400px;'>
                             <label for="username" style="font-size: 18px;">Username</label>
                             <br>
-                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter Username" name="username" required>
+                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter Username" name="username" required minlength="5">
                             <br> <br>
                             <label for="email" style="font-size: 18px;">Email Address</label>
                             <br>
@@ -121,12 +122,12 @@ session_start();
                             <br>
                             <label for="password" style="font-size: 18px;">Choose a Password</label>
                             <br>
-                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="password" placeholder="Must contain atleast 10 characters" name="password" required>
+                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="password" placeholder="Must contain atleast 10 characters" name="password" minlength="10" required>
                             <br>
                             <br>
                             <label for="cpassword" style="font-size: 18px;">Repeat Password</label>
                             <br>
-                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="password" placeholder="Must contain atleast 10 characters" name="cpassword" required>
+                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="password" placeholder="Must contain atleast 10 characters" name="cpassword" minlength="10" required>
                             <br>
                             <br> <br>
                             <button type="submit" class="signupbtn" name="submit">Sign Up</button>

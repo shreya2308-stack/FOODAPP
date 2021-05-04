@@ -33,10 +33,10 @@ session_start();
 
 </head>
 
-<body style="background-image: url(images/bg3.jpg);" >
+<body style="background-image: url(Images/bg3.jpg);" >
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="index.html"><img src="images/foodnest.png" alt="logo" class="img-responsive"></a>
+    <a class="navbar-brand" href="products.php">FOODNEST</a>
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -46,15 +46,12 @@ session_start();
       <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link active" href="products.php">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Categories</a>
-      </li>
+      </li> 
       <li class="nav-item">
         <a class="nav-link" href="checkout.php">Checkout</a>
       </li>
       <li class="navbar__item" id="dropdown">
-                  <a class="nav-link" href="#"><img src="images/user.png" height="30px"></a>
+                  <a class="nav-link" href="#"><img src="Images/user.png" height="30px"></a>
                     <div class="dropdown-content">
                         <ul>
                             <li class="dropdown-links">
@@ -64,7 +61,10 @@ session_start();
                             </li>
                             <li class="dropdown-links">
                                 <a href="account.php" >Account</a>
-                            </li>                  
+                            </li>   
+                            <li class="dropdown-links">
+                                <a href="orders.php" >Orders</a>
+                            </li>                
                             <li class="dropdown-links">
                                 <a href="logout.php">Logout</a>
                             </li>

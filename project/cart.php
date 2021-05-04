@@ -19,7 +19,7 @@
     
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
-  images<a class="navbar-brand" href="index.html"><img src="images/foodnest.png" alt="logo" class="img-responsive"></a>
+  <a class="navbar-brand" href="products.php">FOODNEST</a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -31,15 +31,12 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href="products.php">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Categories</a>
-      </li>
+      </li> 
       <li class="nav-item">
         <a class="nav-link" href="checkout.php">Checkout</a>
       </li>
       <li class="navbar__item" id="dropdown">
-        <a class="nav-link" href="#"><img src="images/user.png" height="30px"></a>
+        <a class="nav-link" href="#"><img src="Images/user.png" height="30px"></a>
           <div class="dropdown-content">
               <ul>
                   <li class="dropdown-links">
@@ -48,8 +45,11 @@
                       ?>
                   </li>
                   <li class="dropdown-links">
-                      <a href="account.php" >Account</a>
-                  </li>                  
+                      <a href="account.php">Account</a>
+                  </li>     
+                  <li class="dropdown-links">
+                      <a href="orders.php">Orders</a>
+                  </li>           
                   <li class="dropdown-links">
                       <a href="logout.php">Logout</a>
                   </li>
@@ -127,7 +127,7 @@
                         <?php endwhile; ?>
                         <tr>
                             <td colspan="3">
-                                <a href="index.php" class="btn btn-success"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Continue
+                                <a href="products.php" class="btn btn-success"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Continue
                                     Ordering</a>
                             </td>
                             <td colspan="2"><b>Grand Total</b></td>

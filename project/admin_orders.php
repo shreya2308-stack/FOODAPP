@@ -36,7 +36,7 @@ tr:nth-child(even){background-color: #f2f2f2}
    
  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="index.php">FOODNEST</a>
+  <a class="navbar-brand" href="products.php">FOODNEST</a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -47,11 +47,8 @@ tr:nth-child(even){background-color: #f2f2f2}
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link active" href="index.php">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Categories</a>
-      </li>
+        <a class="nav-link active" href="products.php">Products</a>
+      </li> 
       <li class="nav-item">
         <a class="nav-link" href="checkout.php">Checkout</a>
       </li>
