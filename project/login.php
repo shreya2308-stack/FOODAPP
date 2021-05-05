@@ -44,18 +44,14 @@ session_start();
 
             $pass_decode = password_verify($password, $db_pass);
 
-            
             if($pass_decode){
                 ?>
                 <script >
                 alert("Login Successful");
                 </script>
                 <?php
-                if($email_pass['email']=='admin@foodnest.com'){
-                    
-                    header('location:adminpage.php');}
-                else{
-                    header('location:products.php');}
+                
+                header('location:products.php');
                             
         }   else{
             ?>
@@ -91,7 +87,7 @@ session_start();
                     <br>
                     <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="password" placeholder="Enter Password" name="password" required>
                     <br>
-                    <span class="forget"><a href=# style="text-decoration: none; color: rgb(57, 167, 231);">Forgot Password?</a></span>
+                    <span class="forget"><a href=forgot.php style="text-decoration: none; color: rgb(57, 167, 231);">Forgot Password?</a></span>
                     <br>
                     <br>
                     <label>
