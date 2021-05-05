@@ -25,6 +25,7 @@ session_start();
       }
         </style>
     </head>
+    <body style="background-image: url(Images/bg3.jpg);">
     <?php
 
         include 'dbcon.php';
@@ -121,12 +122,12 @@ session_start();
                             <br>
                             <label for="password" style="font-size: 18px;">Choose a Password</label>
                             <br>
-                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="password" placeholder="Must contain atleast 5 characters" name="password" minlength="5" required>
+                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="password" placeholder="Must contain atleast 10 characters" name="password" minlength="10" required>
                             <br>
                             <br>
                             <label for="cpassword" style="font-size: 18px;">Repeat Password</label>
                             <br>
-                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="password" placeholder="Password" name="cpassword" minlength="5" required>
+                            <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="password" placeholder="Must contain atleast 10 characters" name="cpassword" minlength="10" required>
                             <br>
                             <br> <br>
                             <button type="submit" class="signupbtn" name="submit">Sign Up</button>

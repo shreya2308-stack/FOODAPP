@@ -7,7 +7,6 @@ $sql = "SELECT * FROM orders INNER JOIN registration1 ON orders.name = registrat
 $result = mysqli_query($connect,$sql);
 ?>
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
       
@@ -23,9 +22,8 @@ $result = mysqli_query($connect,$sql);
      table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 80%;
+  width: 100%;
   border: 1px solid #ddd;
-  margin:100px auto ;
 }
 th{
     
@@ -36,7 +34,6 @@ th, td {
   padding: 8px;
 }
 
-tr:nth-child(odd){background-color: #fff}
 tr:nth-child(even){background-color: #f2f2f2}
      </style>
     </head>
@@ -89,9 +86,9 @@ tr:nth-child(even){background-color: #f2f2f2}
         <div style="overflow-x:auto;">
         
             <table style='font-family:"Courier New", Courier, monospace; font-size:120%'>
-                <th>Order Number</th>
-                <th>Cart Items</th>
-                <th>Address</th>
+                <th> CUSTOMER NAME</th>
+                <th> CART ITEMS</th>
+                <th>ADDRESS</th>
                 <th>Payment Mode</th>               
                     <?php
                     if(mysqli_num_rows($result)>0)
@@ -104,7 +101,7 @@ tr:nth-child(even){background-color: #f2f2f2}
                     $fruits_ar=explode(" ",$str);
                     $str1 = $row["products"];
                     $fruits_ar1=explode(" ",$str1);?>
-                    
+                   
                       
                     <tr><td><?php $arrlength=count($fruits_ar1);
                     echo($str)?></td>

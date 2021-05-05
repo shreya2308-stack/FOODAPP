@@ -8,5 +8,4 @@ $con = mysqli_connect($server,$user,$password,$db);
 
 date_default_timezone_set('Asia/Kolkata');
 $error = "";
-
 ?>

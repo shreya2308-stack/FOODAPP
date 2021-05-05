@@ -21,7 +21,7 @@
   <!-- Brand -->
   <a class="navbar-brand" href="products.php">FOODNEST</a>
 
-  <!-- Toggler/collapsibe Button ---->
+  <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
