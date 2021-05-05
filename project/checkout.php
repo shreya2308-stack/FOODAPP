@@ -81,7 +81,7 @@ session_start();
 
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-6 px-4 pb-4" id="order">
+      <div class="col-lg-6 px-4 pb-4" id="order" style="background-color: white; margin-top: 20px; border-radius: 25px;">
         <h4 class="text-center" style ="color: white;">Complete your order!</h4>
         <div class="jumbotron p-3 mb-2 text-center">
           <h6 class="lead"><b>Product(s) : </b><?= $allItems; ?></h6>
