@@ -11,6 +11,8 @@ session_start();
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" integrity="sha512-gRH0EcIcYBFkQTnbpO8k0WlsD20x5VzjhOA1Og8+ZUAhcMUCvd+APD35FJw3GzHAP3e+mP28YcDJxVr745loHw==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
         <link rel="stylesheet" href="styles.css">
         <style>
            input:invalid {
@@ -92,12 +94,10 @@ session_start();
 
         <main>
         <header class="header">
-            <nav class="navbar">
-                <div class="navbar__container">
-                    <a href="products.php" id="navbar__logo">FoodNest</a><img src="Images/FN.png" style="height: 75px;">
-                </div>
-            </nav>
-        </header>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html"><img src="images/foodnest.png" alt="logo" class="img-responsive"></a>
+        </nav>
+      </header> 
             <div >
                 <img src="Images/FN1.png" alt="" style='height:400px;margin-top: 150px; margin-right: 150px;' align=right >
                 <section class="positioning">
