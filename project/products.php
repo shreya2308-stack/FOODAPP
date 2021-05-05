@@ -20,7 +20,7 @@ if(!isset($_SESSION['username'])){
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
         <link rel="stylesheet" href="styles1.css">
     </head>
-    <body style="background-image: url(images/bg3.jpg);" >
+    <body style="background-image: url(Images/reddish.jpg); background-repeat: no-repeat; background-size: cover"  >
       <header class="header">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <a class="navbar-brand" href="index.html"><img src="images/foodnest.png" alt="logo" class="img-responsive"></a>
