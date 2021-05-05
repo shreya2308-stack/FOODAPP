@@ -12,9 +12,11 @@ session_start();
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="shrink-to-fit=no, width=device-width,initial-scale=1">
         <title>Add Product</title>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" integrity="sha512-gRH0EcIcYBFkQTnbpO8k0WlsD20x5VzjhOA1Og8+ZUAhcMUCvd+APD35FJw3GzHAP3e+mP28YcDJxVr745loHw==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
-        <link rel="stylesheet" href="styles1.css">
+        <link rel="stylesheet" href="styles.css">
     <style>
         .UserContainer {
     margin-top:50px;
@@ -113,27 +115,29 @@ session_start();
       </header> 
       <main>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+        <br>
+                <h3 style="margin-left:18em;color:white; font-weight:600">ADD NEW ITEMS</h3>
                 <div class="UserContainer" style='margin-left: 400px;'>
-                    <label for="product_name" style="font-size: 18px;">Product Name</label>
+                    <label for="product_name" style="font-size: 20px;">Product Name</label>
                     <br>
-                    <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter product name" name="product_name" required minlength="3">
+                    <input style="font-size: 20px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter product name" name="product_name" required minlength="3">
                     <br> <br>
-                    <label for="product_price" style="font-size: 18px;">Product Price</label>
+                    <label for="product_price" style="font-size: 20px;">Product Price</label>
                     <br>
-                    <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="number" placeholder="Enter cost" name="product_price" required>
-                    <br>
-                    <br>
-                    <label for="product_image" style="font-size: 18px;">Product Image</label>
-                    <br>
-                    <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="file" name="product_image" required>
+                    <input style="font-size: 20px; font-family: 'Lateef', cursive; width: 19em; padding:5px" type="number" placeholder="Enter cost" name="product_price" required>
                     <br>
                     <br>
-                    <label for="product_code" style="font-size: 18px;">Product Code</label>
+                    <label for="product_image" style="font-size: 20px; ">Product Image</label>
                     <br>
-                    <input style="font-size: 25px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter Code" name="product_code"  required pattern="[p]\d{4}">
+                    <input style="font-size: 20px; font-family: 'Lateef', cursive; height:40px" type="file" name="product_image" required>
                     <br>
                     <br>
-                    <button type="submit" class="signupbtn" name="submit">Add</button>
+                    <label for="product_code" style="font-size: 20px;">Product Code</label>
+                    <br>
+                    <input style="font-size: 20px; font-family: 'Lateef', cursive;" type="text" placeholder="Enter Code" name="product_code"  required pattern="[p]\d{4}">
+                    <br>
+                    <br><br>
+                    <button style="margin-left:10em; background-color:red" type="submit"  class="addbtn" name="submit">Add</button> 
                 </div>
                 <br><br>
             </form>
