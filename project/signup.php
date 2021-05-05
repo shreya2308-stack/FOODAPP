@@ -25,6 +25,7 @@ session_start();
       }
         </style>
     </head>
+    <body style="background-image: url(Images/back.jpg); background-repeat: no-repeat; background-size: cover">
     <?php
 
         include 'dbcon.php';
@@ -74,8 +75,8 @@ session_start();
                         alert("Thank you for signing-up");
                     </script>
                     <?php 
-                    
                 header('location:products.php');
+                    
                 }
                 else{
                     ?>
@@ -94,7 +95,7 @@ session_start();
 
         <main>
         <header class="header">
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark"> -->
         <a class="navbar-brand" href="index.html"><img src="images/foodnest.png" alt="logo" class="img-responsive"></a>
         </nav>
       </header> 
@@ -103,7 +104,7 @@ session_start();
                 <section class="positioning">
                 
                 <br>
-                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" style="margin-left: 50px;">
                         <div class="UserContainer" style='margin-left: 400px;'>
                             <label for="username" style="font-size: 18px;">Username</label>
                             <br>

@@ -18,7 +18,7 @@ session_start();
            
         </style>
     </head>
-    <body style="background-image: url(Images/bg3.jpg);">
+    <body style="background-image: url(Images/back.jpg); background-repeat: no-repeat; background-size: cover">
     <?php
 
         include 'dbcon.php';
@@ -50,9 +50,12 @@ session_start();
                 alert("Login Successful");
                 </script>
                 <?php
-                
+                if($email=='admin@foodnest.com'){
+                    header('location:adminpage.php');
+                }
+                else{
                 header('location:products.php');
-                            
+                }
         }   else{
             ?>
             <script >
@@ -69,14 +72,14 @@ session_start();
 
 ?>
     <header class="header">
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark"> -->
         <a class="navbar-brand" href="index.html"><img src="images/foodnest.png" alt="logo" class="img-responsive"></a>
         </nav>
       </header> 
         <img src="Images/FN1.png" alt="" style='height:400px;margin-top: 200px; margin-right: 150px;' align=right >
         <section class="positioning">
         <br>
-            <form action="login.php" method="POST" >
+            <form action="login.php" method="POST" style="margin-left: 50px;">
                 <div class="UserContainer" style='margin-left: 400px;'>
                     <label for="email" style="font-size: 18px;">Email Address</label>
                     <br>
