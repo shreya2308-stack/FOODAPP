@@ -115,8 +115,11 @@ button[type=submit]:hover {
                 <input type="hidden" class= "pprice" value="<?= $row['product_price'] ?>">
                 <input type="hidden" class= "pimage" value="<?= $row['product_image'] ?>">
                 <input type="hidden" class= "pcode" value="<?= $row['product_code'] ?>">
-                <button class="btn btn-info btn-block addItemBtn"> <i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Add to cart</button>
-            </form>
+                <div align=center>
+                <a class="btn btn-secondary" href='editadmin.php'> Edit</a>
+                <a class="btn btn-danger" href=''> Delete</a>
+                </div>
+              </form>
   
 
             </div>
