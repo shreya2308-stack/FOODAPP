@@ -2,9 +2,11 @@
 session_start();
 $connect = mysqli_connect("localhost","root","","cart_system");
 $name=$_SESSION['username'];
-$sql = "SELECT * FROM orders INNER JOIN registration1 ON orders.name = registration1.username";
+
+$sql = "SELECT * FROM orders ";
 
 $result = mysqli_query($connect,$sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,6 +80,7 @@ tr:nth-child(even){background-color: #f2f2f2}
         
             <table style='font-family:"Courier New", Courier, monospace; font-size:120%'>
                 <th>Order Number</th>
+                <th>Customer Name</th>
                 <th>Cart Items</th>
                 <th>Address</th>
                 <th>Payment Mode</th>               
@@ -86,16 +89,18 @@ tr:nth-child(even){background-color: #f2f2f2}
                     {
                         while($row = mysqli_fetch_array($result))
                         {
+                          
                     ?>
                     <?php
-                    $str = $row["username"];
+                    $str = $row["name"];
                     $fruits_ar=explode(" ",$str);
                     $str1 = $row["products"];
                     $fruits_ar1=explode(" ",$str1);?>
                     
                       
                     <tr><td><?php $arrlength=count($fruits_ar1);
-                    echo($str)?></td>
+                    echo($row["id"])?></td>
+                    <td><?php echo($str)?></td>
                     <td><?php echo($str1)?></td>
                     <td><?php echo($row["address"]) ?></td>
                     <td><?php echo($row["pmode"]) ?></td>
