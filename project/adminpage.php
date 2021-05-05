@@ -116,10 +116,10 @@ button[type=submit]:hover {
                 <input type="hidden" class= "pimage" value="<?= $row['product_image'] ?>">
                 <input type="hidden" class= "pcode" value="<?= $row['product_code'] ?>">
                 <div align=center>
-                <a class="btn btn-secondary" href='editadmin.php'> Edit</a>
-                <a class="btn btn-danger" href=''> Delete</a>
+                <a class="btn btn-secondary" href='editadmin.php?product_name=<?php echo $row['product_name'];?>' style="background-color:green;"> Edit</a>
+                <a class="btn btn-danger" href='delete.php?product_name=<?php echo $row['product_name'];?>' style="background-color:red;"> Delete</a>
                 </div>
-              </form>
+            </form>
   
 
             </div>

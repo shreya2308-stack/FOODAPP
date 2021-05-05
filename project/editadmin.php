@@ -1,10 +1,11 @@
 <?php
 session_start();
-$connect = mysqli_connect("localhost","root","","cart_system");
 $name=$_SESSION['username'];
-$sql = "SELECT * FROM product";
 
-$result = mysqli_query($connect,$sql);
+include 'dbcon.php';
+$sql = "SELECT * FROM product WHERE product_name='" . $_GET["product_name"] . "'";
+
+$result = mysqli_query($con,$sql);
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +64,22 @@ $result = mysqli_query($connect,$sql);
           </div>
         </nav>
       </header> 
+      <?php
+
+        include 'dbcon.php';
+
+        if(isset($_POST['submit'])){
+
+
+            $product_name = mysqli_real_escape_string($con, $_POST['product_name']) ;
+            $product_price = mysqli_real_escape_string($con, $_POST['product_price']) ;
+            $product_image = mysqli_real_escape_string($con, $_POST['product_image']) ;
+            $product_code = mysqli_real_escape_string($con, $_POST['product_code']) ;
+
+            $updatequery = "UPDATE `product` SET `product_name`='$product_name',`product_price`='$product_price',`product_image`='Images/$product_image',`product_code`='$product_code' )";
+            $Uquery = mysqli_query($con,$updatequery);
+        }
+        ?>
 <main>
         <h3 style="text-align:center;color:white">Edit poducts</h3>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="GET">
